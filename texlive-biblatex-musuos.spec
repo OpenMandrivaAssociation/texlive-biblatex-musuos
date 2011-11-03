@@ -1,3 +1,9 @@
+# revision 24097
+# category Package
+# catalog-ctan /macros/latex/contrib/biblatex-contrib/biblatex-musuos
+# catalog-date 2011-09-23 15:58:32 +0200
+# catalog-license lppl
+# catalog-version 1.0
 Name:		texlive-biblatex-musuos
 Version:	1.0
 Release:	1
@@ -42,6 +48,7 @@ should be usable with other classes, too.
 %doc %{_texmfdistdir}/doc/latex/biblatex-musuos/biblatex-musuos.pdf
 %doc %{_texmfdistdir}/doc/latex/biblatex-musuos/biblatex-musuos.tex
 %doc %{_texmfdistdir}/doc/latex/biblatex-musuos/musuos-bsp.bib
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -52,3 +59,5 @@ should be usable with other classes, too.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
