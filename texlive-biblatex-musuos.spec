@@ -1,18 +1,12 @@
-# revision 24097
-# category Package
-# catalog-ctan /macros/latex/contrib/biblatex-contrib/biblatex-musuos
-# catalog-date 2011-09-23 15:58:32 +0200
-# catalog-license lppl
-# catalog-version 1.0
 Name:		texlive-biblatex-musuos
-Version:	1.0
-Release:	11
+Version:	24097
+Release:	1
 Summary:	A biblatex style for citations in musuos.cls
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/biblatex-contrib/biblatex-musuos
 License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/biblatex-musuos.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/biblatex-musuos.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/biblatex-musuos.r24097.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/biblatex-musuos.doc.r24097.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -23,12 +17,12 @@ The style is designed for use with the musuos class, but it
 should be usable with other classes, too.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -42,25 +36,10 @@ should be usable with other classes, too.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Tue Jan 03 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.0-2
-+ Revision: 749668
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 1.0-1
-+ Revision: 717929
-- texlive-biblatex-musuos
-- texlive-biblatex-musuos
-- texlive-biblatex-musuos
-- texlive-biblatex-musuos
-- texlive-biblatex-musuos
-
