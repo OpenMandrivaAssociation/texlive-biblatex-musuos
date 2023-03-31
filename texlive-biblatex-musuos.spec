@@ -1,6 +1,6 @@
 Name:		texlive-biblatex-musuos
 Version:	24097
-Release:	1
+Release:	2
 Summary:	A biblatex style for citations in musuos.cls
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/biblatex-contrib/biblatex-musuos
